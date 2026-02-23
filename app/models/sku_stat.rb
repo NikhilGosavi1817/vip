@@ -1,0 +1,2 @@
+class SkuStat < ApplicationRecord
+end

@@ -16,4 +16,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+
+  resources :orders, only: %i[index show create update destroy] do
+    member do
+      post :lock
+    end
+  end
 end
